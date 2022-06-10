@@ -1,0 +1,248 @@
+/*************************************************************************/
+/******************************  Variables  ******************************/
+/*************************************************************************/
+
+:root {
+    /* Main colors */
+    --main-white:      #FFFFFF;
+    --main-black:      #000000;
+    --main-yellow:     #E9BC48;
+    --main-red:        #7D4651;
+    --main-blue-light: #4F6D89;    
+    --main-blue-dark:  #485972;    
+    --main-purple:     #3D1F37;
+    /* Secondary colors */
+    --yellow-1: #85780a;
+    --yellow-2: #b4b229;
+    --yellow-3: #c39200;
+    --yellow-4: #feffb5;
+    --red-1:    #c4302b;
+    --red-2:    #441818;
+    --blue-1:   #3d2b7e;
+    --blue-2:   #18117c;
+    --green-1:  #092e1d;
+    --green-2:  #116161;
+    --green-3:  #194b19;
+    /* Size text */
+    --size-micro:      0.4rem;
+    --size-very-small: 0.8rem;
+    --size-small:      1.2rem;
+    --size-normal:     1.6rem;
+    --size-large:      2rem;
+    /* Size titles */
+    --size-llllll: 2.4rem;
+    --size-lllll:  2.8rem;
+    --size-llll:   3.2rem;
+    --size-lll:    3.6rem;
+    --size-ll:     4rem;
+    --size-l:      4.4rem;
+    /* Fonts  Ubuntu 300 300 500 500 MuseoModerno 200 400 500 700*/
+    /* font-family: 'MuseoModerno', cursive; */
+    /* font-family: 'Ubuntu', sans-serif; */
+}
+
+
+/************************************************************/
+/************************* Settings *************************/
+/************************************************************/
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    margin:     0;
+    padding:    0;
+}
+
+html {
+    box-sizing: border-box;
+    font-size:  62.5%;
+    scroll-behavior: smooth;
+}
+
+body {    
+    font-family:      Arial, Helvetica, sans-serif;
+    font-size:        var(--size-large);
+    font-weight:      400;
+    line-height:      2;    
+}
+
+
+/*************************************************************/
+/************************* Main Menu *************************/
+/*************************************************************/
+header {
+    background: url('../img/hero.jpeg') no-repeat center center/cover;
+    height: 100vh;
+}
+
+.main-menu-container {
+    align-items: center;
+    background-color: rgba(61, 31, 55, 0.9);
+    border-radius: 0.4rem;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 60%;
+    padding: 0 5rem;
+    transform: skewY(4deg);
+}
+
+.main-menu-container h1 {
+    margin: 0;
+    padding: 0;
+    font-size: var(--size-l);
+    text-align: center;
+    width: 90%;
+}
+
+.main-menu {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+    height: 60%;
+}
+
+.main-menu li {
+    text-align: center;
+    list-style: none;
+}
+
+.main-menu li a {
+    color: var(--main-white);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.fa-arrow-up {
+    position: fixed;
+    bottom: 6rem;
+    right: 6rem;
+}
+
+.arrow-link {
+    color: var(--main-white);
+    font-size: 8rem;
+}
+
+@media (max-width: 740px) {
+    .main-menu-container {
+        height: 80%;
+        padding: 0 2rem;
+    }
+    .main-menu-container h1 {
+        font-size: var(--size-ll);
+    }
+    .fa-arrow-up {
+        bottom: 4rem;
+        right: 4rem;
+    }
+    
+    .arrow-link {
+        font-size: 6rem;
+    }
+}
+
+
+@media (max-width: 650px) {
+    .main-menu-container {
+        height: 80%;
+        padding: 0 1rem;
+        width: 90%;
+    }
+    
+    .main-menu-container h1 {
+        font-size: var(--size-lll);
+    }
+    .fa-arrow-up {
+        bottom: 2rem;
+        right: 2rem;
+    }
+    
+    .arrow-link {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 530px) {
+    .main-menu-container {
+        padding: 0;
+        height: 90%;
+        width: 80%;
+    }
+}
+
+
+/********************************************************/
+/************************* Hero *************************/
+/********************************************************/
+
+#home {
+    background-color: var(--main-red);
+}
+
+#ubication {
+    background-color: var(--main-blue-light);
+}
+
+#rules {
+    background-color: var(--main-yellow);
+}
+
+#whatis {
+    background-color: var(--main-purple);
+}
+
+
+
+/*************************************************************/
+/************************* Utilities *************************/
+/*************************************************************/
+
+.center-flex {
+    align-items:     center;
+    display:         flex;
+    justify-content: center;
+}
+
+.color-white {
+    color: var(--main-white);
+}
+
+.upper {
+    text-transform: uppercase;
+}
+
+.info-section {
+    height: 100vh;
+}
+
+.neon-blue {
+    text-shadow: 0 -1px 4px var(--main-white), 2px 2px 10px var(--main-blue-light), 2px -2px 20px blue;     
+    animation: blue-neon 2s infinite alternate;
+}
+
+
+.neon-orange {
+    text-shadow: 0 -1px 4px var(--main-white), 2px 2px 10px var(--main-yellow), 2px -2px 20px orange;     
+}
+
+
+.neon-orange:hover {
+    text-shadow: 0 -1px 4px var(--main-white), 1px 1px 2px orange, 2px -2px 20px var(--main-purple);     
+}
+
+
+@keyframes blue-neon {
+	0%, 10%, 15%, 20%, 30%, 35%, 40%, 50%, 55%, 60%, 70%, 75%, 80%, 85%, 90%, 100% {
+		text-shadow: 9px 9px 18px #3485ff, 
+					 3px 3px 5px #00246c, 
+					 -3px -3px 5px #00246c, 
+					 -9px -9px 27px #3485ff;
+	}
+
+	10%, 15%, 60% {
+		text-shadow: none;
+	}
+}
