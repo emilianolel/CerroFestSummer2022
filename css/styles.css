@@ -53,8 +53,8 @@
 }
 
 html {
-    box-sizing: border-box;
-    font-size:  62.5%;
+    box-sizing:      border-box;
+    font-size:       62.5%;
     scroll-behavior: smooth;
 }
 
@@ -69,87 +69,91 @@ body {
 /*************************************************************/
 /************************* Main Menu *************************/
 /*************************************************************/
+
 header {
     background: url('../img/hero.jpeg') no-repeat center center/cover;
     height: 100vh;
 }
 
 .main-menu-container {
-    align-items: center;
+    align-items:      center;
     background-color: rgba(61, 31, 55, 0.9);
-    border-radius: 0.4rem;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    height: 60%;
-    padding: 0 5rem;
-    transform: skewY(4deg);
+    border-radius:    0.4rem;
+    display:          flex;
+    flex-direction:   column;
+    height:           60%;
+    justify-content:  space-around;
+    padding:          0 5rem;
+    transform:        skewY(4deg);
 }
 
 .main-menu-container h1 {
-    margin: 0;
-    padding: 0;
-    font-size: var(--size-l);
+    font-size:  var(--size-l);
+    margin:     0;
+    padding:    0;
     text-align: center;
-    width: 90%;
+    width:      90%;
 }
 
 .main-menu {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
+    align-items:     center;
+    display:         flex;
+    flex-direction:  column;
+    height:          60%;
     justify-content: space-around;
-    margin: 0;
-    padding: 0;
-    height: 60%;
+    margin:          0;
+    padding:         0;
 }
 
 .main-menu li {
-    text-align: center;
-    list-style: none;
+    text-align: center;    
 }
 
 .main-menu li a {
-    color: var(--main-white);
+    color:           var(--main-white);
     text-decoration: none;
-    text-transform: uppercase;
+    text-transform:  uppercase;
 }
 
 .fa-arrow-up {
+    bottom:   6rem;
     position: fixed;
-    bottom: 6rem;
-    right: 6rem;
+    right:    6rem;
 }
 
 .arrow-link {
-    color: var(--main-white);
+    color:     var(--main-white);
     font-size: 8rem;
 }
 
 @media (max-width: 740px) {
+    
     .main-menu-container {
-        height: 80%;
+        height:  80%;
         padding: 0 2rem;
     }
+
     .main-menu-container h1 {
         font-size: var(--size-ll);
     }
+    
     .fa-arrow-up {
         bottom: 4rem;
-        right: 4rem;
+        right:  4rem;
     }
     
     .arrow-link {
         font-size: 6rem;
     }
+
 }
 
-
 @media (max-width: 650px) {
+ 
     .main-menu-container {
-        height: 80%;
+        height:  80%;
         padding: 0 1rem;
-        width: 90%;
+        width:   90%;
     }
     
     .main-menu-container h1 {
@@ -157,26 +161,29 @@ header {
     }
     .fa-arrow-up {
         bottom: 2rem;
-        right: 2rem;
+        right:  2rem;
     }
     
     .arrow-link {
         font-size: 4rem;
     }
+
 }
 
 @media (max-width: 530px) {
+
     .main-menu-container {
         padding: 0;
-        height: 90%;
-        width: 80%;
+        height:  90%;
+        width:   80%;
     }
+
 }
 
 
-/********************************************************/
-/************************* Hero *************************/
-/********************************************************/
+/***********************************************************/
+/************************* Sectons *************************/
+/***********************************************************/
 
 #home {
     background-color: var(--main-red);
@@ -195,15 +202,68 @@ header {
 }
 
 
+/*************************************************************/
+/************************* Ubication *************************/
+/*************************************************************/
+
+.ubication-container {
+    height: 100%;
+}
+
+.ubication-menu {
+    align-items:     center;
+    display:         flex;
+    height:          10rem;
+    justify-content: space-between;
+    margin:          3rem 0;
+    width:           95%;
+}
+
+.ubication-menu li {
+    flex-basis:  0;
+    flex-grow:   1;
+    flex-shrink: 1;
+}
+
+.ubication-menu li h3 {
+    text-align: center;
+}
+
+@media (max-width: 740px) {
+
+    .ubication-menu {
+        flex-direction: column;
+    }
+
+}
+
 
 /*************************************************************/
 /************************* Utilities *************************/
 /*************************************************************/
 
+.clear-list {
+    list-style: none;
+}
+
+.section-header {
+    align-items:     center;
+    display:         flex;
+    flex-direction:  column;
+    justify-content: center;
+    margin-top:      4rem;
+    width:           100%;
+}
+
+
 .center-flex {
     align-items:     center;
     display:         flex;
     justify-content: center;
+}
+
+.section-header h2 {
+    font-size: var(--size-ll);
 }
 
 .color-white {
@@ -230,6 +290,7 @@ header {
 
 
 .neon-orange:hover {
+    cursor: pointer;
     text-shadow: 0 -1px 4px var(--main-white), 1px 1px 2px orange, 2px -2px 20px var(--main-purple);     
 }
 
