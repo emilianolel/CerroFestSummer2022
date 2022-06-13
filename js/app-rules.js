@@ -1,5 +1,6 @@
 (() => {
 
+    
     'use strict';
 
     const rulesTitle = document.querySelector('.rules-title');
@@ -18,6 +19,12 @@
     closeRules.addEventListener('click', () => {
         viewRules();
     })
+
+    document.addEventListener('keydown', ({key}) => {
+        if (key === 'Escape' && bannerRules.classList.contains('rules-message')) {
+            viewRules();
+        }
+    });
 
 
 })();

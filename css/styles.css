@@ -11,18 +11,6 @@
     --main-blue-light: #4F6D89;    
     --main-blue-dark:  #485972;    
     --main-purple:     #3D1F37;
-    /* Secondary colors */
-    --yellow-1: #85780a;
-    --yellow-2: #b4b229;
-    --yellow-3: #c39200;
-    --yellow-4: #feffb5;
-    --red-1:    #c4302b;
-    --red-2:    #441818;
-    --blue-1:   #3d2b7e;
-    --blue-2:   #18117c;
-    --green-1:  #092e1d;
-    --green-2:  #116161;
-    --green-3:  #194b19;
     /* Size text */
     --size-micro:      0.4rem;
     --size-very-small: 0.8rem;
@@ -220,15 +208,47 @@ header {
 
 .home-message {
     align-items:      center;
-    background-color: var(--main-blue-light);
-    color:            var(--main-yellow);
     display:          flex;
+    flex-direction:   column;
+    font-size: var(--size-llll);
     justify-content:  center;
     margin:           12rem auto;
     padding:          4rem 6rem;
     text-align:       justify;
-    transform:        skewX(10deg);
-    width:            60%;    
+    transform:        skewX(-10deg);
+    width:            80%;    
+}
+
+.invitation-figure img {
+    height: 20rem;
+    margin-top: 4rem;
+}
+
+.invitation-figure img:hover {
+    cursor: pointer;
+}
+
+.invitation-container {
+    align-items:      center;
+    background-color: rgba(61, 31, 55, 0.9);
+    display:          flex;
+    height:           100%;
+    justify-content:  center;
+    position:         fixed;
+    top:              0;
+    left:             0;
+    width:            100%;
+    z-index:          1000;
+}
+.invitation-container img {
+    width: 50%;
+}
+
+.close-invitation {
+    font-size: 3rem;
+    position:  fixed;
+    right:     4rem;
+    top:       2rem;
 }
 
 
@@ -307,13 +327,14 @@ header {
     width:            100% ;
     z-index:          1000;
 }
+
 .rules-message ul {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+    align-items:     center;
+    display:         flex;
+    flex-direction:  column;
+    height:          100%;
     justify-content: space-around;
-    width: 100%;
+    width:           100%;
 }
 
 .rules-message ul li {
@@ -321,12 +342,44 @@ header {
 }
 
 .close-rules {
-    position: fixed;
-    right: 6rem;
-    top: 0;
-    font-size: 8rem;
+    font-size: 3rem;
+    position:  fixed;
+    right:     4rem;
+    top:       2rem;
 }
 
+
+/**********************************************************/
+/************************* Whatis *************************/
+/**********************************************************/
+
+.whatis-container {
+    align-items:     center;
+    display:         flex;
+    flex-direction:  column;
+    height:          100%;
+    justify-content: center;
+    position:        absolute;
+    width:           100%;
+    z-index:         10;
+}
+
+.whatis-message {
+    background-color: var(--main-yellow);
+    color:            var(--main-red);
+    margin:           4rem auto;
+    padding:          4rem 6rem;
+    text-align:       justify;
+    transform:        skewX(-10deg);
+    width:            60%;
+}
+
+.close-rules {
+    font-size: 3rem;
+    position:  fixed;
+    right:     4rem;
+    top:       2rem;
+}
 
 
 /*************************************************************/
@@ -369,6 +422,16 @@ header {
     z-index:    0;
 }
 
+.background-whatis {
+    background: url('../img/basilica.png') no-repeat center center/cover;;
+    height:     60rem;
+    left:       30%;
+    position:   absolute;
+    top:        5rem;
+    width:      60rem;
+    z-index:    0;
+}
+
 .display-none {
     display: none;
 }
@@ -406,6 +469,10 @@ header {
 
 .info-section {
     height: 100vh;
+}
+
+.text-center {
+    text-align: center;
 }
 
 .neon-blue {
