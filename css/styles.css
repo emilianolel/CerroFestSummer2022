@@ -13,7 +13,7 @@
     --main-purple:     #3D1F37;
     /* Size text */
     --size-micro:      0.4rem;
-    --size-very-small: 0.8rem;
+    --size-very-small: 0.8rem; 
     --size-small:      1.2rem;
     --size-normal:     1.6rem;
     --size-large:      2rem;
@@ -183,7 +183,7 @@ header {
 }
 
 #rules {
-    background-color: var(--main-yellow);
+    background-color: var(--main-red);
 }
 
 #whatis {
@@ -240,6 +240,7 @@ header {
     width:            100%;
     z-index:          1000;
 }
+
 .invitation-container img {
     width: 50%;
 }
