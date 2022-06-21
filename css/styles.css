@@ -317,6 +317,10 @@ header {
     padding-top: 0.2rem;
 }
 
+.rules-container h2:hover {
+    cursor: pointer;
+}
+
 .rules-message {
     align-items:      center;
     background-color: rgba(72, 89, 114, 0.9);
@@ -360,7 +364,7 @@ header {
     display:         flex;
     flex-direction:  column;
     height:          100%;
-    justify-content: center;
+    justify-content: space-around;
     position:        absolute;
     width:           100%;
     z-index:         10;
@@ -369,7 +373,7 @@ header {
 .whatis-message {
     background-color: var(--main-yellow);
     color:            var(--main-red);
-    margin:           4rem auto;
+    margin:           0 auto;
     padding:          4rem 6rem;
     text-align:       justify;
     transform:        skewX(-10deg);
