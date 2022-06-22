@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
     <!--  FONT AWESOME  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -56,20 +57,26 @@
         -->
         <section class="info-section" id="home">
             <div class="background-home">
+                <div class="background-home-center">
+                </div>
             </div>
-        
             <div class="home-container">
                 <div class="section-header">
-                    <h2 class="neon-blue upper color-white">
+                    <h2 id="home-title" class="neon-blue upper color-white">
                         CerroFest 2022
                     </h2>
                 </div>
-
                 <div class="display-none invitation-baner">
                     <div class="close-invitation">
                         <i class="color-white neon-orange fa-solid fa-x"></i>
                     </div>
-                    <img src="img/invitacion.jpeg" alt="Invitación">
+                    <div class="invitation-baner-information">
+                        <h2>
+                            <a id="link-whatsapp" class="neon-orange color-white clear-link" href="https://chat.whatsapp.com/GQxl7GGSDct9h4it8oQKTb" target="_blank">
+                                Unete al grupo de WhatsApp
+                            </a>
+                        </h2>
+                    </div>
                 </div>
                 <div class="home-message">
                     <p class="neon-orange text-center color-white">
@@ -93,6 +100,8 @@
         -->
         <section class="info-section center-flex" id="ubication">
             <div class="background-ubication">
+                <div class="background-ubication-center">
+                </div>
             </div>
             <div class="ubication-container">
                 <div class="section-header">
@@ -130,6 +139,9 @@
                 <div class="display-none ubication-item-box">
                     <p>
                         Seguir la ruta predeterminada por Waze o Google, maps XD
+                        <a class="clear-link neon-blue color-white" href="https://www.google.com/maps/d/u/0/edit?mid=1gUi7PvPvNqv2i2jvcLB_s9-c3ZbUMPY&ll=19.225495247458156%2C-99.1027670749712&z=14" target="_blank">
+                            aquí está el link a google maps
+                        </a>
                     </p>
                 </div>
             </div>
@@ -195,7 +207,31 @@
                     <p>
                         El CerroFest es un proyecto sin fines de lucro el cual pretende convertirse
                         en el festival más desenfrenado de la actualidad.
+                        <span id="whatis-galery" class="color-white neon-blue">Aquí la evidencia.</span>
                     </p>
+                </div>
+            </div>
+            <div class="display-none banner-galery">
+                <div class="close-galery">
+                    <i class="color-white neon-orange fa-solid fa-x"></i>
+                </div>
+                <div class="galery-container">
+                    <div class="galery-left-arrow center-flex">
+                        <i class="color-white neon-orange fa-solid fa-arrow-left"></i>
+                    </div>
+                    <div class="galery-image center-flex">
+                        <!--
+                            Para agregar imagenes respetar el formato de clases
+                            Solo una foto puede tener la clase selected image y
+                            esta es la que se mostrara al abrir la galeria
+                        -->
+                        <img class="galery-image selected-image" src="img/patricio.png" alt="Galeria loca">
+                        <img class="galery-image display-none" src="img/charly.jpg" alt="Galeria loca">
+                        <img class="galery-image display-none" src="img/como-bajar-la-peda.jpg" alt="Galeria loca">
+                    </div>
+                    <div class="galery-right-arrow center-flex">
+                        <i class="color-white neon-orange fa-solid fa-arrow-right"></i>
+                    </div>
                 </div>
             </div>
         </section>
@@ -209,5 +245,6 @@
     <script src="js/app-home.js"></script>
     <script src="js/app-ubication.js"></script>
     <script src="js/app-rules.js"></script>
+    <script src="js/app-whatis.js"></script>
 </body>
 </html>

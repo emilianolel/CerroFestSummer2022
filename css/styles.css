@@ -195,6 +195,17 @@ header {
 /************************* Home *************************/
 /********************************************************/
 
+#link-whatsapp {
+    display:    block;
+    font-size:  var(--size-l);
+    text-align: center;
+}
+
+#home-title {
+    font-size:  var(--size-l);
+    text-align: center;
+}
+
 .home-container {
     align-items:     center;
     display:         flex;
@@ -215,7 +226,7 @@ header {
     justify-content:  center;
     margin:           6rem auto;
     padding:          4rem 6rem;
-    text-align:       justify;
+    text-align:       center;
     transform:        skewX(-10deg);
     width:            80%;    
 }
@@ -253,34 +264,96 @@ header {
     top:       2rem;
 }
 
+@media (max-width: 1000px) {
+
+    #home-title {
+        font-size: var(--size-ll);
+    }
+
+    .home-message {
+        margin:  4rem auto;
+        padding: 4rem;
+        width:   90%;    
+    }
+
+    .invitation-figure img {
+        height:     18rem;
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    #home-title {
+        font-size: var(--size-llll);
+    }
+
+    .home-message {
+        font-size: var(--size-lllll);
+        margin:    2rem 0;
+        width:     80%;    
+    }
+
+    .invitation-figure img {
+        height:     14rem;
+        margin-top: 2rem;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    #home-title {
+        font-size: var(--size-llll);
+    }
+
+    .home-message {
+        font-size: var(--size-llllll);
+        margin:    0;
+        padding:   4rem 2rem;
+    }
+
+    .invitation-figure img {
+        height:     12rem;
+    }
+
+}
+
 
 /*************************************************************/
 /************************* Ubication *************************/
 /*************************************************************/
 
 .ubication-container {
-    height:   100%;
-    position: absolute;
-    width:    100%;
-    z-index:  10;
+    align-items:     center;
+    display:         flex;
+    flex-direction:  column;
+    height:          100%;
+    justify-content: center;
+    margin:          0;
+    padding:         0;
+    position:        absolute;
+    width:           100%;
+    z-index:         10;
 }
 
 .ubication-container .section-header h2 {
-    margin: 2rem auto;
+    margin:     0;
+    text-align: center;
 }
 
 .ubication-menu {
     align-items:     center;
     display:         flex;
-    height:          10rem;
     justify-content: space-between;
-    margin:          4rem 0;
+    margin:          2rem 0;
 }
 
 .ubication-menu li {
     flex-basis:  0;
     flex-grow:   1;
     flex-shrink: 1;
+    margin:      1rem 0;
 }
 
 .ubication-menu li h3 {
@@ -289,7 +362,7 @@ header {
 
 .ubication-message {
     background-color: var(--main-yellow);
-    margin:           4rem auto;
+    margin:           4rem 0 0 0;
     padding:          4rem 6rem;
     text-align:       justify;
     transform:        skewX(10deg);
@@ -304,6 +377,12 @@ header {
 
     .ubication-menu {
         flex-direction: column;
+    }
+
+    .ubication-message {
+        margin:           4rem 0 0 0;
+        padding:          2rem 4rem;
+        width:            80%;
     }
 
 }
@@ -380,6 +459,52 @@ header {
     width:            60%;
 }
 
+#whatis-galery:hover {
+    cursor: pointer;
+}
+
+.banner-galery {
+    align-items:      center;
+    background-color: rgba(233, 188, 72, 0.9);
+    display:          flex;
+    height:           100%;
+    justify-content:  center;
+    position:         fixed;
+    top:              0;
+    left:             0;
+    width:            100% ;
+    z-index:          1000;;
+}
+
+.close-galery {
+    font-size: 3rem;
+    position:  fixed;
+    right:     4rem;
+    top:       2rem;
+}
+
+.galery-container {
+    align-items:      center;
+    display:          flex;
+    height:           80%;
+    justify-content:  center;
+}
+
+.galery-left-arrow,
+.galery-right-arrow {
+    font-size: 3rem;
+    width:     20%;
+}
+
+.galery-image {
+    margin:  0;
+    padding: 0;
+}
+
+.selected-image {
+    width: 90%;
+}
+
 @media (max-width: 800px) {
 
     .whatis-message {
@@ -397,7 +522,21 @@ header {
     .whatis-message {
         margin:  2rem auto;
         padding: 2rem 4rem;
-        width:   90%;
+        width:   85%;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    #whatis h2 {
+        font-size: var(--size-llllll);
+    }
+
+    .whatis-message {
+        font-size: var(--size-large);
+        margin:    0;
+        padding:   2rem 4rem;
     }
 
 }
@@ -412,25 +551,39 @@ header {
 }
 
 .background-home {
+    align-items:     flex-end;
+    display:         flex;
+    justify-content: center;
+    height:          100%;
+    position:        absolute;
+    top:             0;
+    width:           100%;
+    z-index:         0;
+}
+
+.background-home-center {
     background: url('../img/hero-montain.svg') no-repeat center center/cover;;
     height:     60rem;
-    left:       30%;
-    position:   absolute;
-    top:        10%;
     transform:  skewY(-5deg);
     width:      60rem;
-    z-index:    0;
 }
 
 .background-ubication {
+    align-items:     flex-end;
+    display:         flex;
+    justify-content: center;
+    height:          100%;
+    position:        absolute;
+    top:             0;
+    width:           100%;
+    z-index:         0;
+}
+
+.background-ubication-center {
     background: url('../img/beer.png') no-repeat center center/cover;;
     height:     60rem;
-    left:       30%;
-    position:   absolute;
-    top:        10%;
     transform:  rotate(25deg);
     width:      60rem;
-    z-index:    0;
 }
 
 .background-rules {
@@ -462,8 +615,8 @@ header {
 
 .background-whatis-center {
     background: url('../img/basilica.png') no-repeat center center/cover;
-    height: 60rem;
-    width:  60rem;
+    height:     60rem;
+    width:      60rem;
 }
 
 @media (max-width: 1200px) {
@@ -476,6 +629,16 @@ header {
 }
 
 @media (max-width: 1000px) {
+
+    .background-home-center {
+        height: 55rem;
+        width:  55rem;
+    }
+
+    .background-ubication-center {
+        height: 50rem;
+        width:  50rem;
+    }
 
     .background-whatis-center {
         height: 50rem;
@@ -500,6 +663,16 @@ header {
 
 @media (max-width: 800px) {
 
+    .background-home-center {
+        height: 50rem;
+        width:  50rem;
+    }
+
+    .background-ubication-center {
+        height: 45rem;
+        width:  45rem;
+    }
+
     .background-whatis-center {
         height: 38rem;
         width:  38rem;
@@ -508,6 +681,11 @@ header {
 }
 
 @media (max-width: 700px) {
+
+    .background-ubication-center {
+        height: 40rem;
+        width:  40rem;
+    }
 
     .background-whatis-center {
         height: 36rem;
@@ -532,16 +710,54 @@ header {
 
 @media (max-width: 500px) {
 
+    .background-home-center {
+        height: 40rem;
+        width:  40rem;
+    }
 
+    .background-ubication-center {
+        height: 32rem;
+        width:  32rem;
+    }
+    
 }
 
 @media (max-width: 400px) {
+    
+    .background-home-center {
+        height: 35rem;
+        width:  35rem;
+    }
 
+    .background-ubication-center {
+        height: 30rem;
+        width:  30rem;
+    }
 
+    .background-whatis-center {
+        height: 28rem;
+        width:  28rem;
+    }
+    
 }
 
-#home, #ubication {
-    display: none;
+@media (max-width: 350px) {
+    
+    .background-home-center {
+        height: 30rem;
+        width:  30rem;
+    }
+
+    .background-ubication-center {
+        height: 25rem;
+        width:  25rem;
+    }
+    
+    .background-whatis-center {
+        height: 26rem;
+        width:  26rem;
+    }
+    
 }
 
 .display-none {
@@ -550,6 +766,10 @@ header {
 
 .clear-list {
     list-style: none;
+}
+
+.clear-link {
+    text-decoration: none;
 }
 
 .section-header {
