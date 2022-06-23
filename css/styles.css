@@ -505,6 +505,13 @@ header {
     width: 90%;
 }
 
+.whatsis-list {
+    align-items:     center;
+    display:         flex;
+    flex-direction:  column;
+    justify-content: center;
+}
+
 @media (max-width: 800px) {
 
     .whatis-message {
