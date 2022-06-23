@@ -183,7 +183,7 @@ header {
 }
 
 #rules {
-    background-color: green;
+    background-color: var(--main-yellow);
 }
 
 #whatis {
@@ -419,6 +419,7 @@ header {
     flex-direction:  column;
     height:          100%;
     justify-content: space-around;
+    padding:         2rem 4rem;
     width:           100%;
 }
 
@@ -510,6 +511,13 @@ header {
     display:         flex;
     flex-direction:  column;
     justify-content: center;
+    margin:          0;
+    padding:         0;
+}
+.whatsis-list li {
+    display:    block;
+    text-align: left;
+    width:      90%;
 }
 
 @media (max-width: 800px) {
